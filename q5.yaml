@@ -18,15 +18,15 @@ spec:
   rules:
     - http:
         paths:
-          - pathType: Prefix
-            path: "/v1/tasks"
+          - path: "/v1/tasks/task"
+            pathType: Prefix
             backend:
               service:
                 name: producer
                 port:
                   number: 80
-          - pathType: Prefix
-            path: "/v1/hello"
+          - path: "/v1/hello"
+            pathType: Prefix
             backend:
               service:
                 name: q4ans
